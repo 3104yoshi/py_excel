@@ -9,6 +9,7 @@ df = pd.read_excel(input_file)
 
 # Pivot the DataFrame to reshape it
 pivot_df = df.pivot(index='name', columns='item', values='price')
+pivot_df = pivot_df.sort_index()
 
 # Reset index and rename columns
 pivot_df = pivot_df.reset_index()
